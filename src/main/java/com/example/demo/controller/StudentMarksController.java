@@ -36,5 +36,13 @@ public class StudentMarksController {
 		
 	}
 	
+	@GetMapping("/exam/marks/70")
+	public List<StudentMarks>  getAll70AboveMarks(){
+		
+		return stuMarksService.fetchAllStudentsAbove70Marks();
+		
+		
+	}
+	
 
 }
