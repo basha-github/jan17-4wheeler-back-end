@@ -33,4 +33,18 @@ public class MyUserService {
 		return res;
 	}
 
+
+	public String addNewUserRecord(MyUser myUser) {
+		String res = "";
+		try {
+			myUserRepo.save(myUser);
+			res = "Successfully add new   User----->"+myUser.getUserName();
+		}catch(Exception e) {
+			res = "not able to save new User--->"+myUser.getUserName();
+		}
+
+		return res;
+		
+	}
+
 }
