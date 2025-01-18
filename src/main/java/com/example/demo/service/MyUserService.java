@@ -1,5 +1,7 @@
 package com.example.demo.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -46,5 +48,18 @@ public class MyUserService {
 		return res;
 		
 	}
+
+
+	public String addAllNewUserRecords(List<MyUser> usersList) {
+		String res = "";
+		try {
+			myUserRepo.saveAll(usersList);
+			res = "Successfully added All new   Users----->"+usersList;
+		}catch(Exception e) {
+			res = "not able to save new User--->"+usersList;
+		}
+
+		return res;
+}
 
 }

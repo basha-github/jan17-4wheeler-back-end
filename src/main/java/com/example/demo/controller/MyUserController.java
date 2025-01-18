@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -42,6 +44,15 @@ public class MyUserController {
 		return res;
 	}
 	
+	@PostMapping("/varun-motors/user/add/all")
+	public String addAllNewUsers(@RequestBody List<MyUser> usersList){
+		
+		System.out.println("data---->"+usersList);
+		
+		String res = myUserSer.addAllNewUserRecords(usersList);
+		
+		return res;
+	}
 	
 	
 	
