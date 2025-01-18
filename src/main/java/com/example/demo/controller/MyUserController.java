@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.MyUser;
+import com.example.demo.entity.StudentMarks;
 import com.example.demo.service.MyUserService;
 
 @RestController
@@ -53,6 +54,8 @@ public class MyUserController {
 		
 		return res;
 	}
+	
+	
 	
 	
 	
